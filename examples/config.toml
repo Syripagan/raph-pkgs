@@ -1,0 +1,9 @@
+# Start of /etc/rad/config.toml (example)
+
+arch]
+multilib = true
+
+[repo]
+url = "https://raw.githubusercontent.com/dejuri/radpkg/main"
+
+# End
