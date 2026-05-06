@@ -656,11 +656,12 @@ fn main() {
                     println!("[rad] installed packages:");
                     let mut i = 0;
                     for entry in entries.flatten() {
-                        if let Ok(name) = entry.file_name().into_string() {
-                            println!("{}.  - {}", i, name);
-                        }
                         i += 1;
+                        if let Ok(name) = entry.file_name().into_string() {
+                            println!("{}. {}", i, name);
+                        }
                     }
+                    println!("[rad] Total packages installed: {}", i);
                 }
                 Err(_) => println!("[rad] no packages installed yet."),
             }
