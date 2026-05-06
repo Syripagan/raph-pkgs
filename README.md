@@ -42,3 +42,11 @@ P.S. If you want you can install rad from rad itself now
 rad -i rad
 ```
 
+
+## Some useful info
+
+This option gives you help, so firstly check out avaible options
+
+```sh
+rad -h
+```
