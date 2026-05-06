@@ -1,3 +1,4 @@
+![Logo](https://raw.githubusercontent.com/dejuri/rad/main/logo.png)
 # rad
 
 rad is a source-based package manager for Radrix GNU/Linux or other GNU/Linux distros, usually LFS.
@@ -34,14 +35,14 @@ Then install rad into the system (execute as root)
 cp ./target/release/rad /usr/bin
 ```
 
-Now you need to create the config file (`/etc/rad/config.toml`), or just copy the example one and edit it (as root)
+Now you have to create the config file (`/etc/rad/config.toml`), or just copy the example one and edit it (as root)
 
 ```sh
 mkdir /etc/rad -p
 cp ./examples/config.toml /etc/rad/
 ```
 
-Now rad is installed!
+Now you have rad installed!
 
 ### P.S. If you want you can install rad from rad itself now
 
@@ -53,4 +54,3 @@ rad -i rad
 ## Some useful info
 
 You might execute `rad -h` firstly, to see available arguments and how to use rad properly.
-
