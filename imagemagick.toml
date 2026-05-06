@@ -1,5 +1,5 @@
 [package]
-name = "ImageMagick"
+name = "imagemagick"
 version = "7.1.2-13"
 description = "ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images"
 source = "https://www.imagemagick.org/archive/releases/ImageMagick-7.1.2-13.tar.xz"
