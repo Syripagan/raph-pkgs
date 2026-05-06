@@ -7,7 +7,7 @@ rad is an abbreviation for Rathrix Automated TOML-packages Header
 but when it combines with Slavic God Radogost, who is the God of trade and seafaring,
 even easier to call it just rad.
 
-It stays for managing system packages, user ones is better to manage with nix or other
+It stays for managing system packages, user ones is better to manage with [nix](https://github.com/NixOS/nix) or other
 
 ## Installation
 
@@ -34,9 +34,16 @@ Then install rad into the system (execute as root)
 cp ./target/release/rad /usr/bin
 ```
 
+Now you have to create the config file (`/etc/rad/config.toml`), or just copy the example one and edit it (as root)
+
+```sh
+mkdir /etc/rad -p
+cp ./examples/config.toml /etc/rad/
+```
+
 Now you have rad installed!
 
-P.S. If you want you can install rad from rad itself now
+### P.S. If you want you can install rad from rad itself now
 
 ```sh
 rad -i rad
@@ -45,8 +52,4 @@ rad -i rad
 
 ## Some useful info
 
-This option gives you help, so firstly check out avaible options
-
-```sh
-rad -h
-```
+You might execute `rad -h` firstly, to see available arguments and how to use rad properly.
