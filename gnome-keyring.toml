@@ -1,0 +1,11 @@
+[package]
+name = "gnome-keyring"
+version = "50.0"
+description = "The GNOME Keyring package contains a daemon that keeps passwords and other secrets for users"
+source = "https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0.tar.xz"
+
+[build]
+system = "manual"
+build_commands = "sed -i 's:"/desktop:"/org:' schema/*.xml && mkdir build-gkr && meson setup build-gkr --prefix=/usr --buildtype=release -D systemd=disabled -D manpage=false && ninja -C build-gkr"
+install_command = "ninja install -C build-gkr"
+depends = "gcr"

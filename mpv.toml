@@ -1,0 +1,10 @@
+[package]
+name = "mpv"
+version = "0.41.0"
+description = "mpv is a free media player for the command line. It supports a wide variety of media file formats, audio and video codecs, and subtitle types"
+source = "https://github.com/mpv-player/mpv/archive/v0.41.0/mpv-0.41.0.tar.gz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D x11=enabled"
+depends = "libass,libplacebo,ffmpeg"

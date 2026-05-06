@@ -1,0 +1,9 @@
+[package]
+name = "graphene"
+version = "1.10.8"
+description = "The Graphene package provides a thin layer of types for graphics libraries"
+source = "https://download.gnome.org/sources/graphene/1.10/graphene-1.10.8.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"

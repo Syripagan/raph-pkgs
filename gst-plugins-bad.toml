@@ -1,0 +1,10 @@
+[package]
+name = "gst-plugins-bad"
+version = "1.28.1"
+description = "The GStreamer Bad Plug-ins package contains a set of plug-ins that aren't up to par compared to the rest"
+source = "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.28.1.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D gpl=enabled"
+depends = "gst-plugins-base,libva"

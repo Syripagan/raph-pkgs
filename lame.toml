@@ -1,0 +1,10 @@
+[package]
+name = "lame"
+version = "3.100"
+description = "The LAME package contains an MP3 encoder and optionally, an MP3 frame analyzer"
+source = "https://downloads.sourceforge.net/lame/lame-3.100.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure && ./configure --prefix=/usr --enable-mp3rtp --disable-static && make"
+install_command = "make pkghtmldir=/usr/share/doc/lame-3.100 install"

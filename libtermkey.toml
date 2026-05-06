@@ -1,0 +1,10 @@
+[package]
+name = "libtermkey"
+version = "0.22"
+description = "This library allows easy processing of keyboard entry from terminal-based programs"
+source = "https://www.leonerd.org.uk/code/libtermkey/libtermkey-0.22.tar.gz"
+
+[build]
+system = "make"
+depends = "unibilium"
+configure_args = ""

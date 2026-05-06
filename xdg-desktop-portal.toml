@@ -1,0 +1,10 @@
+[package]
+name = "xdg-desktop-portal"
+version = "1.20.4"
+description = "xdg-desktop-portal is a D-Bus service that allows applications to interact with the desktop in a safe way"
+source = "https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4/xdg-desktop-portal-1.20.4.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D tests=disabled"
+depends = "fuse,json-glib"

@@ -1,0 +1,10 @@
+[package]
+name = "gst-plugins-base"
+version = "1.28.1"
+description = "GStreamer Base Plugins with Player library"
+source = "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.28.1.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D gl=enabled"
+depends = "gstreamer"

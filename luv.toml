@@ -1,0 +1,10 @@
+[package]
+name = "luv"
+version = ""
+description = "Bare libuv bindings for lua"
+source = "https://github.com/luvit/luv.git"
+
+[build]
+system = "cmake"
+depends = "libuv,luajit"
+configure_args = "-DWITH_LUA_SOURCE=OFF -DLUA_BUILD_TYPE=System -DWITH_SHARED_LIBUV=ON -DBUILD_MODULE=OFF -DBUILD_SHARED_LIBS=ON"

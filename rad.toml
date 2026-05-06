@@ -1,0 +1,8 @@
+[package]
+name = "rad"
+version = "0.2.1"
+description = "rad is a source-based package manager for Radrix GNU/Linux or other GNU/Linux distros"
+source = "https://github.com/dejuri/rad/archive/refs/tags/0.2.1.tar.gz"
+
+[build]
+system = "cargo"

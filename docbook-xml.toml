@@ -1,0 +1,10 @@
+[package]
+name = "docbook-xml"
+version = "4.5"
+description = "The DocBook-4.5 XML DTD-4.5 package contains document type definitions for verification of XML data files against the DocBook rule set"
+source = "https://archive.docbook.org/xml/4.5/docbook-xml-4.5.zip"
+
+[build]
+system = "manual"
+build_commands = "echo 'build is not needed'"
+install_command = "echo Working directory is $PWD && echo DESTDIR is $DESTDIR && install -v -d -m755 $DESTDIR/usr/share/xml/docbook/xml-dtd-4.5 && install -v -d -m755 $DESTDIR/etc/xml && cp -v -af --no-preserve=ownership ../docbook.cat ../*.dtd ./ ../*.mod $DESTDIR/usr/share/xml/docbook/xml-dtd-4.5"

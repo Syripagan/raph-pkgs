@@ -1,0 +1,8 @@
+[package]
+name = "libfyaml"
+version = "0.9.6"
+description = "libfyaml is a high-performance YAML 1.2 and JSON parser/emitter with zero-copy operation"
+source = "https://github.com/pantoniou/libfyaml/releases/download/v0.9.6/libfyaml-0.9.6.tar.gz"
+
+[build]
+system = "autotools"

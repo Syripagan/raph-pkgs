@@ -1,0 +1,10 @@
+[package]
+name = "libsass"
+version = "3.6.6"
+description = "Libsass, a CSS pre-processor language"
+source = "https://github.com/sass/libsass/archive/3.6.6/libsass-3.6.6.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "autoreconf -fi && ./configure --prefix=/usr && make"
+install_command = "make install"

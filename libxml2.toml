@@ -1,0 +1,9 @@
+[package]
+name = "libxml2"
+version = "2.12.7"
+description = "The libxml2 package contains libraries and utilities used for parsing XML files"
+source = "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.7.tar.xz"
+
+[build]
+system = "autotools"
+configure_args = "--disable-static --with-history --with-python=/usr/bin/python3"

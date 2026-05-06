@@ -1,0 +1,9 @@
+[package]
+name = "xdg-desktop-portal-wlr"
+version = "0.7.1"
+description = "The xdg-desktop-portal-wlr package provides a portal backend for Wlroots compositors"
+source = "https://github.com/emersion/xdg-desktop-portal-wlr/archive/v0.7.1/xdg-desktop-portal-wlr-0.7.1.tar.gz"
+
+[build]
+system = "meson"
+configure_args = " --buildtype=release -D sd-bus-provider=libelogind"

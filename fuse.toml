@@ -1,0 +1,10 @@
+[package]
+name = "fuse"
+version = "3.18.2"
+description = "FUSE (Filesystem in Userspace) is a simple interface for userspace programs to export a virtual filesystem to the Linux kernel"
+source = "https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "sed -i '/^udev/,$ s/^/#/' util/meson.build && mkdir build && meson setup build --prefix=/usr --buildtype=release && ninja -C build"
+install_command = "ninja install -C build && chmod u+s $DESTDIR/usr/bin/fusermount3"

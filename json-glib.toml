@@ -1,0 +1,9 @@
+[package]
+name = "json-glib"
+version = "1.10.8"
+description = "The JSON GLib package is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627"
+source = "https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"

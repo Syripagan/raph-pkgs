@@ -1,0 +1,9 @@
+[package]
+name = "opus"
+version = "1.6.1"
+description = "Opus is a lossy audio compression format developed by the Internet Engineering Task Force (IETF) that is particularly suitable for interactive speech and audio transmission over the Internet"
+source = "https://downloads.xiph.org/releases/opus/opus-1.6.1.tar.gz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D docdir=/usr/share/doc/opus-1.6.1"

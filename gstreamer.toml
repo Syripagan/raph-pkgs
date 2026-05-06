@@ -1,0 +1,9 @@
+[package]
+name = "gstreamer"
+version = "1.28.1"
+description = "gstreamer is a streaming media framework that enables applications to share a common set of plugins for tasks such as video encoding and decoding, audio encoding and decoding and bla bla bla"
+source = "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.28.1.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release -D gst_debug=false"

@@ -1,0 +1,9 @@
+[package]
+name = "libva"
+version = "2.23.0"
+description = "Libva is an implementation for VA-API (Video Acceleration API)"
+source = "https://github.com/intel/libva/archive/refs/tags/2.23.0.tar.gz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"

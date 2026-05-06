@@ -1,0 +1,10 @@
+[package]
+name = "harfbuzz"
+version = "14.2.0"
+source = "https://github.com/harfbuzz/harfbuzz"
+description = "This package contains an OpenType text shaping engine"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"
+depends = ""

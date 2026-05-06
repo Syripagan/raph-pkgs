@@ -1,0 +1,10 @@
+[package]
+name = "libass"
+version = "0.17.4"
+source = "https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz"
+description = "Hahah dude, not that ass, the Advanced Substation Alpha/Substation Alpha"
+
+[build]
+system = "autotools"
+configure-args = "--disable-static"
+depends = "freetype,fribidi,nasm"

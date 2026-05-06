@@ -1,0 +1,10 @@
+[package]
+name = "libvterm"
+version = "0.3.3"
+description = "An abstract C99 library which implements a VT220 or xterm-like terminal emulator"
+source = "http://www.leonerd.org.uk/code/libvterm/libvterm-0.3.3.tar.gz"
+
+[build]
+system = "make"
+depends = ""
+configure_args = ""

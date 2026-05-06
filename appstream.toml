@@ -1,0 +1,10 @@
+[package]
+name = "appstream"
+version = "1.1.2"
+description = "The AppStream package contains a library and tool that is useful for retrieving software metadata and making it easily accessible to programs which need it"
+source = "https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz"
+
+[build]
+system = "manual"
+build_commands = "(mkdir build; cd build; meson setup --buildtype=release -D apidocs=false -D man=false -D gir=false -D bash-completion=false -D stemming=false ..; ninja)"
+install_command = "ninja install -C build && mv -v $DESTDIR/usr/local/share/doc/appstream{,-1.1.2}"

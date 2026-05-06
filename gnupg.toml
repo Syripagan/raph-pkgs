@@ -1,0 +1,10 @@
+[package]
+name = "gnupg"
+version = "2.5.18"
+description = "The GnuPG package is GNU's tool for secure communication and data storage"
+source = "https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.18.tar.bz2"
+
+[build]
+system = "autotools"
+configure_args = "--localstatedir=/var --sysconfdir=/etc --docdir=/usr/share/doc/gnupg-2.5.18"
+depends = "libassuan,libksba,npth,openldap"

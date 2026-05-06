@@ -1,0 +1,8 @@
+[package]
+name = "doas"
+version = "6.3p12"
+description = "Lightweight sudo alternative from openbsd"
+source = "https://github.com/slicer69/doas/archive/refs/tags/6.3p12.tar.gz"
+
+[build]
+system = "make"

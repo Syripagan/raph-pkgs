@@ -1,0 +1,10 @@
+[package]
+name = "libplacebo"
+version = "7.360.1"
+description = "The libplacebo package contains a library for processing image and video primitives and shaders. It also includes a high quality rendering pipeline that supports OpenGL and Vulkan"
+source = "https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.1.tar.gz"
+
+[build]
+system = "meson"
+depends = "glad"
+configure_args = "--buildtype=release -D tests=true -D demos=false"

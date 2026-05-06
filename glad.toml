@@ -1,0 +1,10 @@
+[package]
+name = "glad"
+version = "2.0.8"
+source = "https://github.com/Dav1dde/glad/archive/v2.0.8/glad-2.0.8.tar.gz"
+description = "The Glad package contains a generator for loading Vulkan, OpenGL, EGL, GLES, and GLX contexts"
+
+[build]
+system = "manual"
+build_commands = "pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir ."
+install_command = "pip3 install --no-index --find-links dist --no-user --root=$DESTDIR --prefix=/usr --ignore-installed --force-reinstall --no-deps glad2"

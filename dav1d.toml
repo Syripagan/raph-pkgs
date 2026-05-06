@@ -1,0 +1,10 @@
+[package]
+name = "dav1d"
+version = "1.5.3"
+description = "The dav1d package contains an AV1 decoder"
+source = "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"
+depends = "nasm"

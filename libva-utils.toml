@@ -1,0 +1,9 @@
+[package]
+name = "libva-utils"
+version = "2.23.0"
+description = "libva-utils is a collection of utilities and examples to exercise VA-API in accordance with the libva project"
+source = "https://github.com/intel/libva-utils/archive/refs/tags/2.23.0.tar.gz"
+
+[build]
+system = "meson"
+depends = "libva"

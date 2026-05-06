@@ -1,0 +1,10 @@
+[package]
+name = "msgpack-c"
+version = "6.1.0"
+description = "It's like JSON but smaller and faster"
+source = "https://github.com/msgpack/msgpack-c/releases/download/c-6.1.0/msgpack-c-6.1.0.tar.gz"
+
+[build]
+system = "cmake"
+depends = ""
+configure_args = ""

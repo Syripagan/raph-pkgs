@@ -1,0 +1,10 @@
+[package]
+name = "openldap"
+version = "2.6.13"
+source = "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz"
+description = "The OpenLDAP package provides an open source implementation of the Lightweight Directory Access Protocol"
+
+[build]
+system = "manual"
+build_commands = "wget https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch && patch -Np1 -i ./openldap-2.6.13-consolidated-1.patch && autoconf && ./configure --prefix=/usr --sysconfdir=/etc --disable-static --enable-dynamic --disable-debug --disable-slapd && make depend && make"
+install_command = "make install"

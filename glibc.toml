@@ -1,0 +1,11 @@
+[package]
+name = "glibc"
+version = "2.42"
+description = "GNU C Library"
+source = "https://ftp.gnu.org/gnu/glibc/glibc-2.42.tar.xz"
+ 
+[build]
+system = "manual"
+multilib_support = "true"
+build_commands = "wget https://raw.githubusercontent.com/Syripagan/radpkg/main/glibc.sh && bash -e ./glibc.sh build"
+install_command = "bash -e ./glibc.sh install"

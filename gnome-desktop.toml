@@ -1,0 +1,10 @@
+[package]
+name = "gnome-desktop"
+version = "44.3"
+description = "Library with common API for various GNOME desktop components"
+source = "https://download.gnome.org/sources/gnome-desktop/44/gnome-desktop-44.3.tar.xz"
+
+[build]
+system = "meson"
+configure_args = "--buildtype=release"
+depends = "itstool,libxml2"

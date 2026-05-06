@@ -1,0 +1,10 @@
+[package]
+name = "polkit"
+version = "127"
+source = "https://github.com/polkit-org/polkit/archive/127/polkit-127.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "mkdir build && meson setup build --prefix=/usr --buildtype=release -D os_type=lfs -D man=false -D session_tracking=elogind -D systemdsystemunitdir=/tmp -D tests=false && ninja -C build"
+install_command = "ninja install -C build"
+depends = "duktape"

@@ -1,0 +1,7 @@
+[package]
+name = "tree-sitter"
+version = "0.25.1"
+source = "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.25.1.tar.gz"
+
+[build]
+system = "make"

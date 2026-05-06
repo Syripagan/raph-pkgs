@@ -1,0 +1,10 @@
+[package]
+name = "luajit"
+version = "20260213"
+description = "The luajit package contains a Just-In-Time compiler for Lua"
+source = "https://anduin.linuxfromscratch.org/BLFS/luajit/luajit-20260213.tar.xz"
+
+[build]
+system = "make"
+depends = ""
+configure_args = ""
