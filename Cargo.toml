@@ -1,0 +1,10 @@
+[package]
+name = "rad"
+version = "0.2.1"
+edition = "2024"
+description = "Rad - package manager for Radrix System or LFS. This is an abbreviation for Rathrix Automated TOML-packages Header. But when it combines with Slavic God Radogost, who is the God of trade and seafaring, even easier to call it just Rad"
+
+[dependencies]
+colored = "3.1.1"
+serde = { version = "1.0.228", features = ["derive"] }
+toml = "1.1.2"
