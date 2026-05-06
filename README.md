@@ -34,14 +34,14 @@ Then install rad into the system (execute as root)
 cp ./target/release/rad /usr/bin
 ```
 
-Now you have to create the config file (`/etc/rad/config.toml`), or just copy the example one and edit it (as root)
+Now you need to create the config file (`/etc/rad/config.toml`), or just copy the example one and edit it (as root)
 
 ```sh
 mkdir /etc/rad -p
 cp ./examples/config.toml /etc/rad/
 ```
 
-Now you have rad installed!
+Now rad is installed!
 
 ### P.S. If you want you can install rad from rad itself now
 
@@ -53,3 +53,4 @@ rad -i rad
 ## Some useful info
 
 You might execute `rad -h` firstly, to see available arguments and how to use rad properly.
+
