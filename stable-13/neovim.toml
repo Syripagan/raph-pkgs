@@ -1,6 +1,7 @@
 [package]
 name = "neovim"
 version = "0.12.1"
+description = "Vim-fork focused on extensibility and usability"
 source = "https://github.com/neovim/neovim/archive/refs/tags/v0.12.1.tar.gz"
 
 [build]
