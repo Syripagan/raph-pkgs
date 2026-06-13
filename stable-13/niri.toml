@@ -1,0 +1,9 @@
+[package]
+name = "niri"
+version = "26.04"
+description = "A scrollable-tiling wayland compositor"
+source = "https://github.com/niri-wm/niri/archive/refs/tags/v26.04.tar.gz"
+
+[build]
+system = "cargo"
+configure_args = "--release"
