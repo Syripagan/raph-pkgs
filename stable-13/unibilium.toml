@@ -1,7 +1,7 @@
 [package]
 name = "unibilium"
 version = "git"
-description = ""
+description = "Unibilium is a very basic terminfo library"
 source = "https://github.com/neovim/unibilium.git"
 
 [build]
