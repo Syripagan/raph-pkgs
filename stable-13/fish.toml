@@ -1,0 +1,11 @@
+[package]
+name = "fish"
+version = "4.7.1"
+description = "fish is a smart and user-friendly command line shell for macOS, Linux, and the rest of the family"
+source = "https://github.com/fish-shell/fish-shell/releases/download/4.7.1/fish-4.7.1.tar.xz"
+
+[build]
+system = "manual"
+build_commands = "cargo build --release"
+install_command = "mkdir $DESTDIR/bin -p && cp ./target/release/fish $DESTDIR/bin/fish"
+dependencies = "coreutils"
