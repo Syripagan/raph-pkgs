@@ -1,7 +1,7 @@
 [package]
 name = "xdg-desktop-portal-gtk"
 version = "1.15.3"
-description = "GTK backend for xdg-desktop-portal (LFS No-GNOME build)"
+description = "GTK backend for xdg-desktop-portal"
 source = "https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz"
 
 [build]
