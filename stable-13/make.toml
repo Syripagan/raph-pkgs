@@ -1,0 +1,8 @@
+[package]
+name = "make"
+version = "4.4.1"
+description = "The Make package contains a program for controlling the generation of executables and other non-source files of a package from source files"
+source = "https://ftpmirror.gnu.org/make/make-4.4.1.tar.gz"
+
+[build]
+system = "autotools"
