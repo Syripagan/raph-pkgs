@@ -6,5 +6,5 @@ source = "https://storage.googleapis.com/aom-releases/libaom-3.13.3.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "sed -i 's/aom aom_static/aom/' build/cmake/aom_install.cmake && mkdir aom-build && && cmake -B aom-build -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=1 -D ENABLE_DOCS=no -G Ninja && ninja -C aom-build"
+build_commands = "sed -i 's/aom aom_static/aom/' build/cmake/aom_install.cmake && mkdir aom-build && && cmake -B aom-build -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=1 -D ENABLE_DOCS=no -G Ninja && ninja -C aom-build -j$RAD_MAKEOPTS"
 install_command = "ninja install -C aom-build"

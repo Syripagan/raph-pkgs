@@ -6,5 +6,5 @@ source = "https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.
 
 [build]
 system = "manual"
-build_commands = "(mkdir build; cd build; meson setup --buildtype=release -D apidocs=false -D man=false -D gir=false -D bash-completion=false -D stemming=false ..; ninja)"
+build_commands = "(mkdir build; cd build; meson setup --buildtype=release -D apidocs=false -D man=false -D gir=false -D bash-completion=false -D stemming=false ..; ninja -j$RAD_MAKEOPTS)"
 install_command = "ninja install -C build && mv -v $DESTDIR/usr/local/share/doc/appstream{,-1.1.2}"

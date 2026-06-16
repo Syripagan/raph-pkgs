@@ -6,5 +6,5 @@ description = "The OpenLDAP package provides an open source implementation of th
 
 [build]
 system = "manual"
-build_commands = "wget https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch && patch -Np1 -i ./openldap-2.6.13-consolidated-1.patch && autoconf && ./configure --prefix=/usr --sysconfdir=/etc --disable-static --enable-dynamic --disable-debug --disable-slapd && make depend && make"
+build_commands = "wget https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch && patch -Np1 -i ./openldap-2.6.13-consolidated-1.patch && autoconf && ./configure --prefix=/usr --sysconfdir=/etc --disable-static --enable-dynamic --disable-debug --disable-slapd && make depend && make -j$RAD_MAKEOPTS"
 install_command = "make install"

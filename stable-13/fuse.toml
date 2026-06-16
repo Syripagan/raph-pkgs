@@ -6,5 +6,5 @@ source = "https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-
 
 [build]
 system = "manual"
-build_commands = "sed -i '/^udev/,$ s/^/#/' util/meson.build && mkdir build && meson setup build --prefix=/usr --buildtype=release && ninja -C build"
+build_commands = "sed -i '/^udev/,$ s/^/#/' util/meson.build && mkdir build && meson setup build --prefix=/usr --buildtype=release && ninja -C build -j$RAD_MAKEOPTS"
 install_command = "ninja install -C build && chmod u+s $DESTDIR/usr/bin/fusermount3"

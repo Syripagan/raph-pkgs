@@ -6,6 +6,6 @@ source = "https://github.com/fish-shell/fish-shell/releases/download/4.7.1/fish-
 
 [build]
 system = "manual"
-build_commands = "cargo build --release"
+build_commands = "cargo build --release --jobs $RAD_MAKEOPTS"
 install_command = "mkdir $DESTDIR/bin -p && cp ./target/release/fish $DESTDIR/bin/fish"
 dependencies = "coreutils"

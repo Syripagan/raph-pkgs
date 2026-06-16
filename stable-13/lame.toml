@@ -6,5 +6,5 @@ source = "https://downloads.sourceforge.net/lame/lame-3.100.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure && ./configure --prefix=/usr --enable-mp3rtp --disable-static && make"
+build_commands = "sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure && ./configure --prefix=/usr --enable-mp3rtp --disable-static && make -j$RAD_MAKEOPTS"
 install_command = "make pkghtmldir=/usr/share/doc/lame-3.100 install"

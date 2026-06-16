@@ -6,5 +6,5 @@ source = "https://github.com/webmproject/libvpx/archive/v1.16.0/libvpx-1.16.0.ta
 
 [build]
 system = "manual"
-build_commands = "wget https://www.linuxfromscratch.org/patches/blfs/svn/libvpx-1.16.0-security_fix-1.patch && find -type f | xargs touch && patch -Np1 -i ./libvpx-1.16.0-security_fix-1.patch && sed -i 's/cp -p/cp/' build/make/Makefile && mkdir libvpx-build && sh -c 'cd libvpx-build; ../configure --prefix=/usr --enable-shared --disable-static; make'"
+build_commands = "wget https://www.linuxfromscratch.org/patches/blfs/svn/libvpx-1.16.0-security_fix-1.patch && find -type f | xargs touch && patch -Np1 -i ./libvpx-1.16.0-security_fix-1.patch && sed -i 's/cp -p/cp/' build/make/Makefile && mkdir libvpx-build && sh -c 'cd libvpx-build; ../configure --prefix=/usr --enable-shared --disable-static; make -j$RAD_MAKEOPTS'"
 install_command = "make -C libvpx-build install DIST_DIR=$DESTDIR/usr"

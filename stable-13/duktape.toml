@@ -5,6 +5,6 @@ source = "https://duktape.org/duktape-2.7.0.tar.xz"
 
 [build]
 system = "manual"
-build_commands = "sed -i 's/-Os/-O2/' Makefile.sharedlibrary && make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr"
+build_commands = "sed -i 's/-Os/-O2/' Makefile.sharedlibrary && make -f Makefile.sharedlibrary -j$RAD_MAKEOPTS INSTALL_PREFIX=/usr"
 install_command = "make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr install"
 depends = ""

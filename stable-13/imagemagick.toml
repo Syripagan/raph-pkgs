@@ -6,7 +6,7 @@ source = "https://www.imagemagick.org/archive/releases/ImageMagick-7.1.2-13.tar.
 
 [build]
 system = "manual"
-build_commands = "./configure --prefix=/usr --sysconfdir=/etc --enable-hdri --with-modules --with-perl --disable-static && make"
+build_commands = "./configure --prefix=/usr --sysconfdir=/etc --enable-hdri --with-modules --with-perl --disable-static && make -j$RAD_MAKEOPTS"
 install_command = "make DOCUMENTATION_PATH=/usr/share/doc/imagemagick-7.1.2 install"
 depends = ""
 configure_args = ""

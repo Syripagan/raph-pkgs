@@ -6,6 +6,6 @@ source = "https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.1.tar.gz
 
 [build]
 system = "manual"
-build_commands = "sed -r '/cmake_policy.*(0025|0054)/d' -i source/CMakeLists.txt && mkdir bld && cmake -B bld -D CMAKE_INSTALL_PREFIX=/usr -D GIT_ARCHETYPE=1 -D CMAKE_POLICY_VERSION_MINIMUM=3.5 -W no-dev ./source && make -C bld"
+build_commands = "sed -r '/cmake_policy.*(0025|0054)/d' -i source/CMakeLists.txt && mkdir bld && cmake -B bld -D CMAKE_INSTALL_PREFIX=/usr -D GIT_ARCHETYPE=1 -D CMAKE_POLICY_VERSION_MINIMUM=3.5 -W no-dev ./source && make -C bld -j$RAD_MAKEOPTS"
 install_command = "make install -C bld && rm -vf /usr/lib/libx265.a"
 depends = "nasm"
