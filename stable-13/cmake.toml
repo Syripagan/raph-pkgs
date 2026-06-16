@@ -1,0 +1,14 @@
+[package]
+name = "cmake"
+version = "4.3.3"
+description = "The CMake package contains a modern toolset used for generating Makefiles"
+source = "https://cmake.org/files/v4.3/cmake-4.3.3.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake",
+	"./bootstrap --prefix=/usr --system-libs --mandir=/share/man --no-system-jsoncpp --no-system-cppdap --no-system-librhash --docdir=/share/doc/cmake-4.3.3",
+	"make"
+]
+install_command = "make install"
