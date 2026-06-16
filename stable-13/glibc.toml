@@ -7,5 +7,5 @@ source = "https://ftp.gnu.org/gnu/glibc/glibc-2.42.tar.xz"
 [build]
 system = "manual"
 multilib_support = true
-build_commands = "wget https://raw.githubusercontent.com/Syripagan/radpkg/main/stable-13/glibc.sh && bash -e ./glibc.sh build"
+build_commands = "wget https://raw.githubusercontent.com/dejuri/radpkg/main/stable-13/glibc.sh && bash -e ./glibc.sh build"
 install_command = "bash -e ./glibc.sh install"
