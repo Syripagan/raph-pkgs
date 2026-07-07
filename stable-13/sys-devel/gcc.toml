@@ -6,6 +6,6 @@ source = "https://ftpmirror.gnu.org/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz"
 
 [build]
 system = "manual"
-build_commands = "wget https://raw.githubusercontent.com/dejuri/radpkg/main/stable-13/gcc.sh && bash -e ./gcc.sh build"
+build_commands = "wget https://raw.githubusercontent.com/dejuri/radpkg/main/stable-13/sys-devel/gcc.sh && bash -e ./gcc.sh build"
 install_command = "bash -e ./gcc.sh install"
 depends = "zlib"
