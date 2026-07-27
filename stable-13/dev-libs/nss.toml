@@ -1,0 +1,26 @@
+[package]
+name = "nss"
+version = "3.126"
+description = "The Network Security Services (NSS) package is a set of libraries designed to support cross-platform development of security-enabled client and server applications"
+source = "https://archive.mozilla.org/pub/security/nss/releases/NSS_3_126_RTM/src/nss-3.126.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"wget https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch",
+	"patch -Np1 -i ./nss-standalone-1.patch",
+	"make -C nss BUILD_OPT=$RAD_MAKEOPTS NSPR_INCLUDE_DIR=/usr/include/nspr USE_SYSTEM_ZLIB=1 ZLIB_LIBS=-lz NSS_ENABLE_WERROR=0 NSS_USE_SYSTEM_SQLITE=1 $([ $(uname -m) = x86_64 ] && echo USE_64=1)"
+]
+install_command = [
+	"mkdir -p $DESTDIR/usr/lib/pkgconfig $DESTDIR/usr/include/nss $DESTDIR/usr/bin",
+	"install -v -m755 ./dist/Linux*/lib/*.so $DESTDIR/usr/lib",
+	"install -v -m644 ./dist/Linux*/lib/*.chk $DESTDIR/usr/lib",
+	"install -v -m755 -d $DESTDIR/usr/include/nss",
+	"cp -v -RL ./dist/public/nss/* $DESTDIR/usr/include/nss",
+	"cp -v -RL ./dist/private/nss/* $DESTDIR/usr/include/nss",
+	"install -v -m755 ./dist/Linux*/bin/certutil $DESTDIR/usr/bin",
+	"install -v -m755 ./dist/Linux*/bin/nss-config $DESTDIR/usr/bin", 
+	"install -v -m755 ./dist/Linux*/bin/pk12util $DESTDIR/usr/bin",
+	"install -v -m644 ./dist/Linux*/lib/pkgconfig/nss.pc $DESTDIR/usr/lib/pkgconfig"
+]
+depends = "nspr"

@@ -27,6 +27,8 @@ dev-libs/libxml2
 dev-libs/luv
 dev-libs/msgpack-c
 dev-libs/npth
+dev-libs/nspr
+dev-libs/nss
 dev-libs/tree-sitter
 dev-libs/utf8proc
 dev-util/glad

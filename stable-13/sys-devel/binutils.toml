@@ -7,4 +7,4 @@ source = "https://sourceware.org/pub/binutils/releases/binutils-2.46.0.tar.xz"
 [build]
 system = "autotools"
 multilib_support = false
-configure_args = "--sysconfdir=/etc --enable-ld=default --enable-plugins --enable-shared --disable-werror --enable-64-bit-bfd --enable-new-dtags --with-system-zlib --enable-default-hash-style=gnu"
+configure_args = "--sysconfdir=/etc --enable-ld=default --enable-plugins --with-system-zlib --enable-shared --disable-werror --enable-64-bit-bfd --enable-new-dtags --enable-default-hash-style=gnu"

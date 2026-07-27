@@ -1,0 +1,15 @@
+[package]
+name = "nspr"
+version = "4.39"
+description = "Netscape Portable Runtime (NSPR) provides a platform-neutral API for system level and libc like functions"
+source = "https://archive.mozilla.org/pub/nspr/releases/v4.39/src/nspr-4.39.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"sed -i '/^RELEASE/s|^|#|' nspr/pr/src/misc/Makefile.in",
+	"sed -i 's|$(LIBRARY) ||'  nspr/config/rules.mk",
+	"./nspr/configure --prefix=/usr --with-mozilla --with-pthreads $([ $(uname -m) = x86_64 ] && echo --enable-64bit)",
+	"make -j$RAD_MAKEOPTS"
+]
+install_command = "make install DESTDIR=$DESTDIR"
