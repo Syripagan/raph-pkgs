@@ -10,6 +10,8 @@ app-misc/hello
 app-shells/bash-completion
 app-shells/fish
 app-text/docbook-xml
+app-text/docbook-xsl-nons
+app-text/xmlto
 dev-build/cmake
 dev-lang/duktape
 dev-lang/luajit
@@ -24,6 +26,7 @@ dev-libs/libtermkey
 dev-libs/libuv
 dev-libs/libvterm
 dev-libs/libxml2
+dev-libs/libxslt
 dev-libs/luv
 dev-libs/msgpack-c
 dev-libs/npth
@@ -82,4 +85,7 @@ sys-libs/unibilium
 sys-libs/zlib
 sys-process/btop
 www-client/helium-bin
+www-client/links
 x11-libs/nvidia-vaapi
+x11-misc/xdg-utils
+x11-misc/xorg-applications

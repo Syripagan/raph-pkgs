@@ -1,0 +1,18 @@
+[package]
+name = "links"
+version = "2.30"
+description = "Links is a text and graphics mode WWW browser"
+source = "http://links.twibright.com/download/links-2.30.tar.bz2"
+
+[build]
+system = "manual"
+build_commands = [
+	"sed '/*strchr/s/cast_const_char //g' -i ftp.c",
+	"./configure --prefix=/usr --mandir=/usr/share/man",
+	"make -j$RAD_MAKEOPTS"
+]
+install_command = [
+	"make DESTDIR=$DESTDIR install",
+	"install -v -d -m755 $DESTDIR/usr/share/doc/links-2.30",
+	"install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO $DESTDIR/usr/share/doc/links-2.30"
+]

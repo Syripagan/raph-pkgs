@@ -1,0 +1,10 @@
+[package]
+name = "xorg-applications"
+version = "git"
+description = "The Xorg applications provide the expected applications available in previous X Window implementations"
+source = "https://www.x.org/pub/individual/app/"
+
+[build]
+system = "manual"
+build_commands = "wget https://raw.githubusercontent.com/dejuri/radpkg/main/stable-13/x11-misc/xorg-applications.sh"
+install_command = "chmod +x xorg-applications.sh && ./xorg-applications.sh"
