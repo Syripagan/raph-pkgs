@@ -5,5 +5,12 @@ description = "xdg-utils is a set of command line tools that assist applications
 source = "https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v1.2.1/xdg-utils-v1.2.1.tar.gz"
 
 [build]
-system = "autotools"
+system = "manual"
+build_commands = [
+	"./configure --prefix=/usr",
+	"mkdir -p scripts/html scripts/man",
+	"touch scripts/xdg-desktop-menu.txt scripts/xdg-desktop-icon.txt scripts/xdg-mime.txt scripts/xdg-icon-resource.txt scripts/xdg-open.txt scripts/xdg-email.txt scripts/xdg-screensaver.txt scripts/xdg-settings.txt",
+	"make XMLTO=true -j$RAD_MAKEOPTS"
+]
+install_command = "make XMLTO=true DESTDIR=$DESTDIR install"
 depends = "xmlto,links"
