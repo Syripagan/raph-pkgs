@@ -9,12 +9,11 @@ system = "manual"
 build_commands = [
 	"sed 's/helium/&-bin/' helium.desktop -i",
 	"rm chrome",
-	"mv helium helium-bin",
-	"mv helium.desktop helium-bin.desktop"
+	"mv helium helium-bin"
 ]
 install_command = [
 	"mkdir -p $DESTDIR/usr/lib/helium-bin $DESTDIR/usr/bin $DESTDIR/usr/share/applications $DESTDIR/usr/share/icons/hicolor/256x256/apps",
-	"cp helium-bin.desktop $DESTDIR/usr/share/applications/",
+	"cp helium.desktop $DESTDIR/usr/share/applications/",
 	"cp -r * $DESTDIR/usr/lib/helium-bin/",
 	"cp product_logo_256.png $DESTDIR/usr/share/icons/hicolor/256x256/apps/helium-bin.png",
 	"ln -s /usr/lib/helium-bin/helium-bin $DESTDIR/usr/bin/"
