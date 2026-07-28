@@ -6,5 +6,9 @@ source = "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz"
 
 [build]
 system = "autotools"
-configure_args = "--disable-static --without-python --docdir=/usr/share/doc/libxslt-1.1.45"
+configure_args = [
+	"--disable-static",
+	"--without-python", 
+	"--docdir=/usr/share/doc/libxslt-1.1.45"
+]
 depends = "libxml2,docbook-xml,docbook-xsl-nons"
