@@ -2,7 +2,7 @@
 name = "xorg-applications"
 version = "git"
 description = "The Xorg applications provide the expected applications available in previous X Window implementations"
-source = "https://xorg.freedesktop.org/archive/individual/app/appres-1.0.7.tar.xz"
+source = "https://xorg.freedesktop.org/archive/individual/app/appres-1.0.7.tar.xz --no-check-certificate"
 
 [build]
 system = "manual"
