@@ -81,4 +81,5 @@ sys-libs/glibc
 sys-libs/unibilium
 sys-libs/zlib
 sys-process/btop
+www-client/helium-bin
 x11-libs/nvidia-vaapi
