@@ -1,0 +1,16 @@
+[package]
+name = "doxygen"
+version = "1.16.1"
+description = "A documentation generator for C, C++, Java, Python and more"
+source = "https://doxygen.nl/files/doxygen-1.16.1.src.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"mkdir build",
+	"cmake -B build -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release",
+	"ninja -C build -j$RAD_MAKEOPTS"
+]
+install_command = [
+	"DESTDIR=$DESTDIR ninja -C build install"
+]

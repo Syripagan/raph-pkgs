@@ -11,6 +11,7 @@ app-shells/bash-completion
 app-shells/fish
 app-text/docbook-xml
 app-text/docbook-xsl-nons
+app-text/doxygen
 app-text/xmlto
 dev-build/cmake
 dev-lang/duktape

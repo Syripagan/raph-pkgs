@@ -8,3 +8,4 @@ source = "https://download.gnome.org/sources/xdg-desktop-portal-gnome/48/xdg-des
 system = "manual"
 build_commands = "rm -rf build && mkdir -p subprojects/appstream/docs && printf 'subdir_done()' > subprojects/appstream/docs/meson.build && sed -i 's/1.7.alpha/1.6.beta/g' src/meson.build && PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/share/pkgconfig meson setup build --buildtype=release --prefix=/usr -D systemduserunitdir=/tmp -D appstream:docs=false && ninja -C build -j$RAD_MAKEOPTS"
 install_command = "ninja -C build install"
+depends = "libxml2,gnome-desktop,xdg-desktop-portal,xdg-desktop-portal-gtk,gtk4"
