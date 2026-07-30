@@ -6,4 +6,4 @@ source = "https://github.com/rockdaboot/libpsl/releases/download/0.23.0/libpsl-0
 
 [build]
 system = "meson"
-depends = "libidn,libunistring"
+depends = "libidn2,libunistring"
