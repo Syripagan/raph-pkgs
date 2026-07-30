@@ -1,10 +1,13 @@
 [package]
 name = "unibilium"
-version = "git"
+version = "2.1.2"
 description = "Unibilium is a very basic terminfo library"
-source = "https://github.com/neovim/unibilium.git"
+source = "https://github.com/neovim/unibilium/archive/refs/tags/v2.1.2.tar.gz"
 
 [build]
 system = "cmake"
 depends = ""
-configure_args = "-DCMAKE_C_FLAGS='-DTERMINFO=\"/usr/share/terminfo\"' -DTERMINFO_DIRS=/usr/share/terminfo"
+configure_args = [
+	"-DCMAKE_C_FLAGS='-DTERMINFO=\"/usr/share/terminfo\"'",
+	"-DTERMINFO_DIRS=/usr/share/terminfo"
+]
