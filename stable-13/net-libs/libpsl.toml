@@ -1,0 +1,9 @@
+[package]
+name = "libpsl"
+version = "0.23.0"
+description = "The libpsl package provides a library for accessing and resolving information from the Public Suffix List"
+source = "https://github.com/rockdaboot/libpsl/releases/download/0.23.0/libpsl-0.23.0.tar.gz"
+
+[build]
+system = "meson"
+depends = "libidn,libunistring"

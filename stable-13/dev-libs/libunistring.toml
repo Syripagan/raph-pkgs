@@ -1,0 +1,12 @@
+[package]
+name = "libunistring"
+version = "1.4.2"
+description = "libunistring is a library that provides functions for manipulating Unicode and C strings"
+source = "https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz"
+
+[build]
+system = "autotools"
+configure_args = [
+	"--disable-static", 
+	"--docdir=/usr/share/doc/libunistring-1.4.2"
+]

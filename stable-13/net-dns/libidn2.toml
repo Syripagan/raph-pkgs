@@ -1,0 +1,10 @@
+[package]
+name = "libidn2"
+version = "2.3.8"
+description = "libidn2 is a package designed for internationalized string handling"
+source = "https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz"
+
+[build]
+system = "autotools"
+configure_args = "--disable-static"
+depends = "libunistring"

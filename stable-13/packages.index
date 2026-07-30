@@ -24,6 +24,7 @@ dev-libs/libfyaml
 dev-libs/libgpg-error
 dev-libs/libsass
 dev-libs/libtermkey
+dev-libs/libunistring
 dev-libs/libuv
 dev-libs/libvterm
 dev-libs/libxml2
@@ -38,6 +39,7 @@ dev-libs/utf8proc
 dev-util/glad
 dev-util/glslc
 dev-util/itstool
+dev-vcs/git
 gnome-base/gnome-desktop
 gnome-base/gnome-keyring
 gui-libs/gtk4
@@ -68,6 +70,10 @@ media-sound/lame
 media-video/ffmpeg
 media-video/libva-utils
 media-video/mpv
+net-dns/libidn2
+net-libs/libpsl
+net-libs/nghttp2
+net-misc/curl
 net-nds/openldap
 sys-apps/coreutils
 sys-apps/dinit

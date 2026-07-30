@@ -1,0 +1,14 @@
+[package]
+name = "nghttp2"
+version = "1.69.0"
+description = "nghttp2 is an implementation of HTTP/2 and its header compression algorithm, HPACK"
+source = "https://github.com/nghttp2/nghttp2/releases/download/v1.69.0/nghttp2-1.69.0.tar.xz"
+
+[build]
+system = "autotools"
+configure_args = [
+	"--disable-static",
+	"--enable-lib-only",
+	"--docdir=/usr/share/doc/nghttp2-1.69.0"
+]
+depends = "libxml2"

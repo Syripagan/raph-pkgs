@@ -1,0 +1,14 @@
+[package]
+name = "curl"
+version = "8.21.0"
+description = "The cURL package contains a utility and a library used for transferring files with URL syntax to many protocols"
+source = "https://curl.se/download/curl-8.21.0.tar.xz"
+
+[build]
+system = "manual"
+build_commands = [
+	"./configure --prefix=/usr --disable-static --with-openssl --with-ca-path=/etc/ssl/certs",
+	"make -j$RAD_MAKEOPTS",
+	"make DESTDIR=$DESTDIR install"
+]
+depends = "libpsl,nghttp2"

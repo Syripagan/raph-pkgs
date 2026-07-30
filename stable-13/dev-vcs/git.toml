@@ -1,0 +1,14 @@
+[package]
+name = "git"
+version = "2.55.0"
+description = "Git is a free and open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency"
+source = "https://www.kernel.org/pub/software/scm/git/git-2.55.0.tar.xz"
+
+[build]
+system = "manual"
+build_commands = [
+	"./configure --prefix=/usr --with-gitconfig=/etc/gitconfig --with-python=python3 --with-libpcre2",
+	"make -j$RAD_MAKEOPTS",
+	"make DESTDIR=$DESTDIR perllibdir=/usr/lib/perl5/5.42/site_perl install"
+]
+depends = "curl"
