@@ -2,7 +2,7 @@
 name = "coreutils"
 version = "9.10"
 description = "The Coreutils package contains the basic utility programs needed by every operating system"
-source = "https://ftpmirror.gnu.org/coreutils/coreutils-9.10.tar.xz"
+source = "https://ftp.gnu.org/gnu/coreutils/coreutils-9.10.tar.xz"
 
 [build]
 system = "manual"
