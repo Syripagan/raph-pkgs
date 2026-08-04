@@ -6,5 +6,8 @@ source = "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-
 
 [build]
 system = "meson"
-configure_args = "--buildtype=release -D gpl=enabled"
+configure_args = [
+	"--buildtype=release",
+	"-D gpl=enabled"
+]
 depends = "gst-plugins-base,libva"

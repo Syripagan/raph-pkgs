@@ -6,4 +6,11 @@ source = "https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v4.1.0/SVT-AV1-v4.1.
 
 [build]
 system = "cmake"
-configure_args = "-D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D CMAKE_SKIP_INSTALL_RPATH=ON -D BUILD_SHARED_LIBS=ON -W no-dev -G Ninja .."
+configure_args = [
+	"-D CMAKE_INSTALL_PREFIX=/usr",
+	"-D CMAKE_BUILD_TYPE=Release",
+	"-D CMAKE_SKIP_INSTALL_RPATH=ON", 
+	"-D BUILD_SHARED_LIBS=ON", 
+	"-W no-dev",
+	"-G Ninja"
+]

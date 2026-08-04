@@ -6,4 +6,7 @@ source = "https://github.com/emersion/xdg-desktop-portal-wlr/archive/v0.7.1/xdg-
 
 [build]
 system = "meson"
-configure_args = " --buildtype=release -D sd-bus-provider=libelogind"
+configure_args = [
+	"--buildtype=release", 
+	"-D sd-bus-provider=libelogind"
+]

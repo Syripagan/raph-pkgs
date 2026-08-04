@@ -6,4 +6,12 @@ source = "https://www.libsdl.org/release/SDL3-3.4.4.tar.gz"
 
 [build]
 system = "cmake"
-configure_args = "-D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D SDL_TEST_LIBRARY=OFF -D SDL_STATIC=OFF -D SDL_RPATH=OFF -W no-dev -G Ninja .."
+configure_args = [
+	"-D CMAKE_INSTALL_PREFIX=/usr",
+	"-D CMAKE_BUILD_TYPE=Release",
+	"-D SDL_TEST_LIBRARY=OFF",
+	"-D SDL_STATIC=OFF",
+	"-D SDL_RPATH=OFF",
+	"-W no-dev",
+	"-G Ninja"
+]

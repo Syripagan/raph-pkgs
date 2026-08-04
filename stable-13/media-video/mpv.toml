@@ -6,5 +6,8 @@ source = "https://github.com/mpv-player/mpv/archive/v0.41.0/mpv-0.41.0.tar.gz"
 
 [build]
 system = "meson"
-configure_args = "--buildtype=release -D x11=enabled"
+configure_args = [
+	"--buildtype=release",
+	"-D x11=enabled"
+]
 depends = "libass,libplacebo,ffmpeg"

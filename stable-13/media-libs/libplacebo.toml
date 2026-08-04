@@ -7,4 +7,8 @@ source = "https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.
 [build]
 system = "meson"
 depends = "glad"
-configure_args = "--buildtype=release -D tests=true -D demos=false"
+configure_args = [
+	"--buildtype=release",
+	"-D tests=true", 
+	"-D demos=false"
+]

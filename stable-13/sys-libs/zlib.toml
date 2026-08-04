@@ -1,6 +1,7 @@
 [package]
 name = "zlib"
 version = "1.3.2"
+description = "The Zlib package contains compression and decompression routines used by some programs"
 source = "https://zlib.net/zlib-1.3.2.tar.gz"
 
 [build]

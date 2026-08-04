@@ -6,4 +6,7 @@ source = "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.28.1.tar.x
 
 [build]
 system = "meson"
-configure_args = "--buildtype=release -D gst_debug=false"
+configure_args = [
+	"--buildtype=release",
+	"-D gst_debug=false"
+]

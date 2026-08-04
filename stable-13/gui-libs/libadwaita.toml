@@ -6,5 +6,14 @@ source = "https://download.gnome.org/sources/libadwaita/1.9/libadwaita-1.9.0.tar
 
 [build]
 system = "meson"
-configure_args = "--buildtype=release -D examples=false -D tests=false -D introspection=disabled -D appstream:bash-completion=false -D appstream:apidocs=false -D appstream:man=false -D appstream:gir=false"
+configure_args = [
+	"--buildtype=release", 
+	"-D examples=false", 
+	"-D tests=false", 
+	"-D introspection=disabled", 
+	"-D appstream:bash-completion=false", 
+	"-D appstream:apidocs=false", 
+	"-D appstream:man=false",
+	"-D appstream:gir=false"
+]
 depends = "appstream,gtk4,sassc"

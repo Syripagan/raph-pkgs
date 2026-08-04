@@ -6,5 +6,8 @@ source = "https://anduin.linuxfromscratch.org/BLFS/x264/x264-20250815.tar.xz"
 
 [build]
 system = "autotools"
-configure_args = "--enable-shared --disable-cli"
+configure_args = [
+	"--enable-shared",
+	"--disable-cli"
+]
 depends = "nasm"

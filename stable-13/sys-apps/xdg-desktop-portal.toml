@@ -6,5 +6,8 @@ source = "https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4
 
 [build]
 system = "meson"
-configure_args = "--buildtype=release -D tests=disabled"
+configure_args = [
+	"--buildtype=release",
+	"-D tests=disabled"
+]
 depends = "fuse,json-glib"
