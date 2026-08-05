@@ -1,8 +1,8 @@
 [package]
 name = "rad"
-version = "26.8.3"
+version = "26.8.5"
 description = "rad is a source-based package manager for Radian GNU/Linux or LFS"
-source = "https://github.com/dejuri/rad/archive/refs/tags/26.8.3.tar.gz"
+source = "https://github.com/dejuri/rad/archive/refs/tags/26.8.5.tar.gz"
 
 [build]
 system = "cargo"
