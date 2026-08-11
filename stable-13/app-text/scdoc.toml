@@ -1,0 +1,10 @@
+[package]
+name = "scdoc"
+version = "1.11.4"
+description = "The scdoc package provides a man page generator"
+source = "https://git.sr.ht/~sircmpwn/scdoc/archive/1.11.4.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "make PREFIX=/usr"
+install_command = "make DESTDIR=$DESTDIR PREFIX=/usr install"

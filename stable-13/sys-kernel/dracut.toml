@@ -1,0 +1,9 @@
+[package]
+name = "dracut"
+version = "112"
+description = "dracut - the event driven initramfs infrastructure"
+source = "https://github.com/dracut-ng/dracut/archive/refs/tags/112.tar.gz"
+
+[build]
+system = "autotools"
+configure_args = "--disable-documentation"
