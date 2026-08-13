@@ -19,7 +19,7 @@ install_command = [
 	"make headers_install INSTALL_HDR_PATH=$DESTDIR/usr",
 	"cp Makefile Module.symvers System.map .config $DESTDIR/usr/src/linux-7.1.6/",
 	"cp -r include arch scripts $DESTDIR/usr/src/linux-7.1.6/",
-	"rm $DESTDIR/usr/lib/modules/7.1.6/build"
+	"rm $DESTDIR/usr/lib/modules/7.1.6/build",
 	"ln -s /usr/src/linux-7.1.6 $DESTDIR/usr/lib/modules/7.1.6/build",
 	"cp System.map $DESTDIR/boot/System.map-7.1.6",
 	"cp .config $DESTDIR/boot/config-7.1.6",
