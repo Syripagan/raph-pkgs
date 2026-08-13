@@ -21,3 +21,4 @@ install_command = [
 	"cp .config $DESTDIR/boot/config-7.1.6",
 	"cp .config $DESTDIR/var/lib/rad/packages/config/linux"
 ]
+depends = "rsync"
