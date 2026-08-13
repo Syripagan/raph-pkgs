@@ -10,10 +10,10 @@ build_commands = [
 	"wget https://us.download.nvidia.com/XFree86/Linux-x86_64/610.43.03/NVIDIA-Linux-x86_64-610.43.03.run",
 	"chmod +x NVIDIA-Linux-x86_64-610.43.03.run",
 	"./NVIDIA-Linux-x86_64-610.43.03.run --extract-only",
-	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules -j$RAD_MAKEOPTS"
+	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel-open modules -j$RAD_MAKEOPTS"
 ]
 install_command = [
-	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
+	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel-open modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
 	"mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/*.so* $DESTDIR/usr/lib/",
 	"for bin in nvidia-smi nvidia-settings nvidia-xconfig nvidia-cuda-mps-control nvidia-cuda-mps-server nvidia-debugdump nvidia-modprobe nvidia-persistenced nvidia-powerd nvidia-ngx-updater nvidia-pcc; do [ -f NVIDIA-Linux-x86_64-610.43.03/$bin ] && cp -a NVIDIA-Linux-x86_64-610.43.03/$bin $DESTDIR/usr/bin/ || true; done",
