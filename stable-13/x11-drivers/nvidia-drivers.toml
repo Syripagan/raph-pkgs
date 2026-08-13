@@ -13,7 +13,7 @@ build_commands = [
 	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules -j$RAD_MAKEOPTS"
 ]
 install_command = [
-	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules_install SYSSRC=/usr/lib/modules/7.1.6/build INSTALL_MOD_PATH=$DESTDIR",
+	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
 	"mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/*.so* $DESTDIR/usr/lib/",
 	"find NVIDIA-Linux-x86_64-610.43.03 -maxdepth 1 -type f -executable -exec cp -a {} $DESTDIR/usr/bin/ \\;",
