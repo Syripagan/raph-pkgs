@@ -1,0 +1,9 @@
+[package]
+name = "egl-wayland"
+version = "1.1.20"
+description = "EGL-wayland wall destroyer"
+source = "https://github.com/NVIDIA/egl-wayland/archive/refs/tags/1.1.20.tar.gz"
+
+[build]
+system = "meson"
+depends = "nvidia-drivers"
