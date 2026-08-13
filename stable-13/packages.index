@@ -75,6 +75,7 @@ net-dns/libidn2
 net-libs/libpsl
 net-libs/nghttp2
 net-misc/curl
+net-misc/rsync
 net-nds/openldap
 sys-apps/coreutils
 sys-apps/dinit
@@ -89,11 +90,13 @@ sys-devel/gcc
 sys-devel/make
 sys-fs/fuse
 sys-kernel/dracut
+sys-kernel/linux
 sys-libs/glibc
 sys-libs/unibilium
 sys-libs/zlib
 sys-process/btop
 www-client/helium-bin
 www-client/links
+x11-drivers/nvidia-drivers
 x11-libs/nvidia-vaapi
 x11-misc/xdg-utils

@@ -1,0 +1,16 @@
+[package]
+name = "rsync"
+version = "3.4.1"
+description = "Fast versatile file-copying tool"
+source = "https://www.samba.org/ftp/rsync/src/rsync-3.4.1.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"./configure --prefix=/usr --disable-xxhash",
+	"make -j$RAD_MAKEOPTS"
+]
+install_command = [
+	"make install DESTDIR=$DESTDIR"
+]
+depends = "zlib"

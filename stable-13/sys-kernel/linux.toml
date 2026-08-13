@@ -1,0 +1,23 @@
+[package]
+name = "linux"
+version = "7.1.6"
+description = "The Linux package contains the Linux kernel"
+source = "https://www.kernel.org/pub/linux/kernel/v7.x/linux-7.1.6.tar.xz"
+
+[build]
+system = "manual"
+build_commands = [
+	"make mrproper",
+	"cp /var/lib/rad/packages/config/linux .config",
+	"make menuconfig",
+	"make -j$RAD_MAKEOPTS"
+]
+install_command = [
+	"mkdir $DESTDIR/boot $DESTDIR/var/lib/rad/packages/config -p",
+	"make modules_install INSTALL_MOD_PATH=$DESTDIR",
+	"cp arch/x86/boot/bzImage $DESTDIR/boot/vmlinuz-7.1.6-radian",
+	"make headers_install INSTALL_HDR_PATH=$DESTDIR/usr",
+	"cp System.map $DESTDIR/boot/System.map-7.1.6",
+	"cp .config $DESTDIR/boot/config-7.1.6",
+	"cp .config $DESTDIR/var/lib/rad/packages/config/linux"
+]
