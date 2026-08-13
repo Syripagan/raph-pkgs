@@ -14,11 +14,10 @@ build_commands = [
 ]
 install_command = [
 	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
-	"mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps",
+	"mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/*.so* $DESTDIR/usr/lib/",
-	"find NVIDIA-Linux-x86_64-610.43.03 -maxdepth 1 -type f -executable -exec cp -a {} $DESTDIR/usr/bin/ \\;",
+	"for bin in nvidia-smi nvidia-settings nvidia-xconfig nvidia-cuda-mps-control nvidia-cuda-mps-server nvidia-debugdump nvidia-modprobe nvidia-persistenced nvidia-powerd nvidia-ngx-updater nvidia-pcc; do [ -f NVIDIA-Linux-x86_64-610.43.03/$bin ] && cp -a NVIDIA-Linux-x86_64-610.43.03/$bin $DESTDIR/usr/bin/ || true; done",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/*.1.gz $DESTDIR/usr/share/man/man1/ || true",
-	"cp -a NVIDIA-Linux-x86_64-610.43.03/10_nvidia.json $DESTDIR/usr/share/glvnd/egl_vendor.d/ || true",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/10_nvidia.json $DESTDIR/usr/share/glvnd/egl_vendor.d/ || true",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.desktop $DESTDIR/usr/share/applications/ || true",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.png $DESTDIR/usr/share/pixmaps/ || true"
