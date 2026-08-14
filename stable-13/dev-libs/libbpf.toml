@@ -1,0 +1,8 @@
+[package]
+name = "libbpf"
+version = "1.7.0"
+description = "Stand-alone build of libbpf from the Linux kernel"
+source = "https://github.com/libbpf/libbpf/archive/refs/tags/v1.7.0.tar.gz"
+
+[build]
+system = "autotools"

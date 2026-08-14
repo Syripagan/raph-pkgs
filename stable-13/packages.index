@@ -22,6 +22,7 @@ dev-lang/sassc
 dev-libs/elfutils
 dev-libs/fribidi
 dev-libs/json-glib
+dev-libs/libbpf
 dev-libs/libfyaml
 dev-libs/libgpg-error
 dev-libs/libsass

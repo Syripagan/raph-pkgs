@@ -8,7 +8,7 @@ source = "https://github.com/acmel/dwarves/archive/refs/tags/v1.30.tar.gz"
 system = "manual"
 build_commands = [
 	"mkdir build",
-	"cmake -B build -S . -DCMAKE_INSTALL_PREFIX=/usr -D__LIBBPF_FIND_BY_PKGCONFIG=ON"
+	"cmake -B build -S . -DCMAKE_INSTALL_PREFIX=/usr"
 ]
-install_command = "make DESTDIR=$DESTDIR install"
-depends = "elfutils"
+install_command = "make DESTDIR=$DESTDIR -C build install"
+depends = "elfutils,libbpf"
