@@ -6,4 +6,5 @@ source = "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.4.34
 
 [build]
 system = "cmake"
+configure_args = "-DCMAKE_BUILD_TYPE=Debug"
 depends = "vulkan-headers,vulkan-loader,glslang"
