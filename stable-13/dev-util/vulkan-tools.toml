@@ -1,0 +1,9 @@
+[package]
+name = "vulkan-tools"
+version = "1.4.341.0"
+description = "Official Vulkan Development Tools"
+source = "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.4.341.tar.gz"
+
+[build]
+system = "cmake"
+depends = "vulkan-headers,vulkan-loader,glslang"
