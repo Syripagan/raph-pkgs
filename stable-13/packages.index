@@ -19,6 +19,7 @@ dev-lang/duktape
 dev-lang/luajit
 dev-lang/nasm
 dev-lang/sassc
+dev-libs/elfutils
 dev-libs/fribidi
 dev-libs/json-glib
 dev-libs/libfyaml

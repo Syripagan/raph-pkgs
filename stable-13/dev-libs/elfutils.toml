@@ -1,0 +1,8 @@
+[package]
+name = "elfutils"
+version = "0.195"
+description = "Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
+source = "https://sourceware.org/elfutils/ftp/0.195/elfutils-0.195.tar.bz2"
+
+[build]
+system = "autotools"
