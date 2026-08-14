@@ -18,8 +18,7 @@ install_command = [
 	"cp arch/x86/boot/bzImage $DESTDIR/boot/vmlinuz-7.1.6-radian",
 	"make headers_install INSTALL_HDR_PATH=$DESTDIR/usr",
 	"cp -r * $DESTDIR/usr/src/linux-7.1.6/",
-	"rm $DESTDIR/usr/lib/modules/7.1.6/build",
-	"ln -s /usr/src/linux-7.1.6 $DESTDIR/usr/lib/modules/7.1.6/build",
+	"cp .config $DESTDIR/usr/src/linux-7.1.6/",
 	"cp System.map $DESTDIR/boot/System.map-7.1.6",
 	"cp .config $DESTDIR/boot/config-7.1.6",
 	"cp .config $DESTDIR/var/lib/rad/packages/config/linux"

@@ -38,11 +38,11 @@ dev-libs/nspr
 dev-libs/nss
 dev-libs/tree-sitter
 dev-libs/utf8proc
+dev-util/dwarves
 dev-util/glad
 dev-util/glslang
 dev-util/glslc
 dev-util/itstool
-dev-util/pahole
 dev-util/spirv-headers
 dev-util/spirv-tools
 dev-util/vulkan-headers
