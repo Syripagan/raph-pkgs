@@ -14,9 +14,6 @@ build_commands = [
 	"ninja -C build -j$RAD_MAKEOPTS"
 ]
 install_command = [
-	"DESTDIR=$DESTDIR ninja install",
-	"mv $DESTDIR/usr/bin/identity $DESTDIR/usr/bin/mesa-identity",
-	"mv $DESTDIR/usr/bin/linktest $DESTDIR/usr/bin/mesa-linktest",
-	"mv $DESTDIR/usr/bin/poly $DESTDIR/usr/bin/mesa-poly"
+	"DESTDIR=$DESTDIR ninja -C build install",
 ]
-depends = "libglvnd,glslang,vulkan-loader"
+depends = "libglvnd,glslang,vulkan-loader,libdecor"

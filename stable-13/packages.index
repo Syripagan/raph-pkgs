@@ -52,6 +52,7 @@ gnome-base/gnome-keyring
 gui-apps/mesa-demos
 gui-libs/gtk4
 gui-libs/libadwaita
+gui-libs/libdecor
 gui-wm/niri
 media-gfx/imagemagick
 media-libs/dav1d

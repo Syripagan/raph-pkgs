@@ -1,0 +1,12 @@
+[package]
+name = "libdecor"
+version = "0.2.5"
+description = "The libdecor package provides a library that helps Wayland clients draw client-side window decorations"
+source = "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/libdecor-0.2.5.tar.gz"
+
+[build]
+system = "meson"
+configure_args = [
+	"-D demo=false",
+	"-D gtk=disabled"
+]
