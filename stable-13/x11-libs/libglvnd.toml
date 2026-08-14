@@ -8,9 +8,11 @@ source = "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v1.7.0/libglvn
 system = "manual"
 build_commands = [
 	"wget https://www.linuxfromscratch.org/glfs/view/dev/download/libglvnd/libglvnd-v1.7.0-ext_device-1.patch",
-	"patch -Np1 -i ./libglvnd-v1.7.0-ext_device-1.patch",
+	"patch -Np1 -i ./libglvnd-v1.7.0-ext_device-1.patch || true",
+	"rm -rf build || true",
 	"mkdir build",
-	"meson setup --prefix=/usr --buildtype=release -D hgl=false build",
+	"sh -c 'if [ \"$IS_M32\" = \"1\" ]; then (meson setup --prefix=/usr --buildtype=release --cross-file=lib32 --libdir=/usr/lib32 -D hgl=false build); else (meson setup --prefix=/usr --buildtype=release -D hgl=false build); fi'",
 	"ninja -C build -j$RAD_MAKEOPTS"
 ]
 install_command = "ninja install -C build"
+multilib_support = true
