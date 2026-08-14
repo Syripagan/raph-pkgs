@@ -7,6 +7,6 @@ source = "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/libde
 [build]
 system = "meson"
 configure_args = [
-	"-D demo=false",
-	"-D gtk=disabled"
+	"-Ddemo=false",
+	"-Dgtk=disabled"
 ]
