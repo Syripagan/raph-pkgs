@@ -39,7 +39,6 @@ dev-libs/nspr
 dev-libs/nss
 dev-libs/tree-sitter
 dev-libs/utf8proc
-dev-util/dwarves
 dev-util/glad
 dev-util/glslang
 dev-util/glslc

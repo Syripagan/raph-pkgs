@@ -5,4 +5,6 @@ description = "Stand-alone build of libbpf from the Linux kernel"
 source = "https://github.com/libbpf/libbpf/archive/refs/tags/v1.7.0.tar.gz"
 
 [build]
-system = "autotools"
+system = "manual"
+build_commands = "make -C src -j$RAD_MAKEOPTS"
+install_command = "make DESTDIR=$DESTDIR -C src install"
