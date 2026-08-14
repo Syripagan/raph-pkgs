@@ -1,0 +1,16 @@
+[package]
+name = "libglvnd"
+version = "1.7.0"
+description = "This dispatches OpenGL API calls to a given driver vendor at runtime"
+source = "https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v1.7.0/libglvnd-v1.7.0.tar.gz"
+
+[build]
+system = "manual"
+build_commands = [
+	"wget https://www.linuxfromscratch.org/glfs/view/dev/download/libglvnd/libglvnd-v1.7.0-ext_device-1.patch",
+	"patch -Np1 -i ./libglvnd-v1.7.0-ext_device-1.patch",
+	"mkdir build",
+	"meson setup --prefix=/usr --buildtype=release -D hgl=false build",
+	"ninja -C build -j$RAD_MAKEOPTS"
+]
+install_command = "ninja install -C build"

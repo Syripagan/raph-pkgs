@@ -1,0 +1,8 @@
+[package]
+name = "egl-gbm"
+version = "1.0.7"
+description = "This provides API functions for managing memory buffers"
+source = "https://github.com/glfs-book/libgbm/archive/1.0.7/libgbm-1.0.7.tar.gz"
+
+[build]
+system = "meson"

@@ -98,6 +98,8 @@ sys-process/btop
 www-client/helium-bin
 www-client/links
 x11-drivers/nvidia-drivers
+x11-libs/egl-gbm
 x11-libs/egl-wayland
+x11-libs/libglvnd
 x11-libs/nvidia-vaapi
 x11-misc/xdg-utils
