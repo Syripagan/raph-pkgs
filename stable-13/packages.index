@@ -15,6 +15,7 @@ app-text/doxygen
 app-text/scdoc
 app-text/xmlto
 dev-build/cmake
+dev-debug/gdb
 dev-lang/duktape
 dev-lang/luajit
 dev-lang/nasm

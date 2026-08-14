@@ -1,0 +1,8 @@
+[package]
+name = "gdb"
+version = "17.2"
+description = "GNU Project debugger allows you to see what is going inside another program while it executes"
+source = "https://ftpmirror.gnu.org/gdb/gdb-17.2.tar.xz"
+
+[build]
+system = "autotools"
