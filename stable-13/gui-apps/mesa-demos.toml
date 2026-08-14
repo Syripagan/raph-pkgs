@@ -1,0 +1,22 @@
+[package]
+name = "mesa-demos"
+version = "9.0.0"
+description = "The Mesa-Demos package provides multiple demos to test the installation of multiple graphics APIs"
+source = "https://archive.mesa3d.org/demos/mesa-demos-9.0.0.tar.xz"
+
+[build]
+system = "manual"
+build_commands = [
+	"wget https://www.linuxfromscratch.org/slfs/view/dev/download/mesa-demos/mesa-demos-9.0.0-install_data-1.patch",
+	"patch -Np1 -i ./mesa-demos-9.0.0-install_data-1.patch",
+	"mkdir build",
+	"meson setup --prefix=/usr --buildtype=release build",
+	"ninja -C build -j$RAD_MAKEOPTS"
+]
+install_command = [
+	"DESTDIR=$DESTDIR ninja install",
+	"mv $DESTDIR/usr/bin/identity $DESTDIR/usr/bin/mesa-identity",
+	"mv $DESTDIR/usr/bin/linktest $DESTDIR/usr/bin/mesa-linktest",
+	"mv $DESTDIR/usr/bin/poly $DESTDIR/usr/bin/mesa-poly"
+]
+depends = "libglvnd,glslang,vulkan-loader"

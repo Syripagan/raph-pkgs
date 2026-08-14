@@ -49,6 +49,7 @@ dev-util/vulkan-headers
 dev-vcs/git
 gnome-base/gnome-desktop
 gnome-base/gnome-keyring
+gui-apps/mesa-demos
 gui-libs/gtk4
 gui-libs/libadwaita
 gui-wm/niri
