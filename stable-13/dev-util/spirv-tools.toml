@@ -1,8 +1,8 @@
 [package]
 name = "spirv-tools"
-version = "1.4.357.0"
+version = "1.4.341.0"
 description = "The SPIRV-Tools package contains libraries and utilities for processing SPIR-V modules"
-source = "https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-1.4.357.0/SPIRV-Tools-vulkan-sdk-1.4.357.0.tar.gz"
+source = "https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-1.4.341.0/SPIRV-Tools-vulkan-sdk-1.4.341.0.tar.gz"
 
 [build]
 system = "cmake"

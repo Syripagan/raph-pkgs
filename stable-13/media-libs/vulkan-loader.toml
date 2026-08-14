@@ -1,8 +1,8 @@
 [package]
 name = "vulkan-loader"
-version = "1.4.357.0"
+version = "1.4.341.0"
 description = "The Vulkan-Loader package contains a library which provides the Vulkan API and provides core support for graphics drivers for Vulkan"
-source = "https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.357.0/Vulkan-Loader-vulkan-sdk-1.4.357.0.tar.gz"
+source = "https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.341.0/Vulkan-Loader-vulkan-sdk-1.4.341.0.tar.gz"
 
 [build]
 system = "cmake"
