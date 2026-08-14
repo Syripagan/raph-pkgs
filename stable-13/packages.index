@@ -41,6 +41,7 @@ dev-util/glad
 dev-util/glslang
 dev-util/glslc
 dev-util/itstool
+dev-util/pahole
 dev-util/spirv-headers
 dev-util/spirv-tools
 dev-util/vulkan-headers

@@ -1,0 +1,8 @@
+[package]
+name = "pahole"
+version = "1.30"
+description = "The more-than-seven dwarves is a collection of tools that allows to inspect and query the DWARF information present in ELF files built with full debug information"
+source = "https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.30.tar.gz"
+
+[build]
+system = "cmake"
