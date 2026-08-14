@@ -1,0 +1,14 @@
+[package]
+name = "glslang"
+version = "16.5.0"
+description = "The Glslang package contains an frontend and validator for OpenGL, OpenGL ES, and Vulkan shaders"
+source = "https://github.com/KhronosGroup/glslang/archive/16.5.0/glslang-16.5.0.tar.gz"
+
+[build]
+system = "cmake"
+configure_args = [
+	"-D ALLOW_EXTERNAL_SPIRV_TOOLS=ON",
+	"-D BUILD_SHARED_LIBS=ON",
+	"-D GLSLANG_TESTS=OFF"
+]
+depends = "cmake,spirv-tools"

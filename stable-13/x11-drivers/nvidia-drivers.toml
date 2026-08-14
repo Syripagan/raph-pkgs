@@ -22,4 +22,4 @@ install_command = [
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.desktop $DESTDIR/usr/share/applications/ || true",
 	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.png $DESTDIR/usr/share/pixmaps/ || true"
 ]
-depends = "linux"
+depends = "linux,vulkan-headers,vulkan-loader,spirv-headers,spirv-tools,glslang"

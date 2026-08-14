@@ -38,8 +38,12 @@ dev-libs/nss
 dev-libs/tree-sitter
 dev-libs/utf8proc
 dev-util/glad
+dev-util/glslang
 dev-util/glslc
 dev-util/itstool
+dev-util/spirv-headers
+dev-util/spirv-tools
+dev-util/vulkan-headers
 dev-vcs/git
 gnome-base/gnome-desktop
 gnome-base/gnome-keyring
@@ -65,6 +69,7 @@ media-libs/opus
 media-libs/sdl2-compat
 media-libs/sdl3
 media-libs/svt-av1
+media-libs/vulkan-loader
 media-libs/x264
 media-libs/x265
 media-sound/lame
