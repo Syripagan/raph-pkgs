@@ -1,0 +1,8 @@
+[package]
+name = "steam-launcher"
+version = "1.0.0.87"
+description = "Official Steam launcher for games"
+source = "https://repo.steampowered.com/steam/archive/stable/steam_1.0.0.87.tar.gz"
+
+[build]
+system = "autotools"

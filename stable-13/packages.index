@@ -49,6 +49,7 @@ dev-util/spirv-tools
 dev-util/vulkan-headers
 dev-util/vulkan-tools
 dev-vcs/git
+games-util/steam-launcher
 gnome-base/gnome-desktop
 gnome-base/gnome-keyring
 gui-apps/mesa-demos
