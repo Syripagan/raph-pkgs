@@ -1,25 +1,26 @@
 [package]
 name = "nvidia-drivers"
-version = "610.43.03"
+version = "610.57.04"
 description = "Nvidia proprietary drivers package"
-source = "https://github.com/NVIDIA/open-gpu-kernel-modules/archive/refs/tags/610.43.03.tar.gz"
+source = "https://us.download.nvidia.com/XFree86/Linux-x86_64/610.57.04/NVIDIA-Linux-x86_64-610.57.04.run"
 
 [build]
 system = "manual"
 build_commands = [
-	"wget https://us.download.nvidia.com/XFree86/Linux-x86_64/610.43.03/NVIDIA-Linux-x86_64-610.43.03.run",
-	"chmod +x NVIDIA-Linux-x86_64-610.43.03.run",
-	"./NVIDIA-Linux-x86_64-610.43.03.run --extract-only",
-	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel-open modules -j$RAD_MAKEOPTS"
+	"wget https://us.download.nvidia.com/XFree86/Linux-x86_64/610.57.04/NVIDIA-Linux-x86_64-610.57.04.run",
+	"chmod +x NVIDIA-Linux-x86_64-610.57.04.run",
+	"./NVIDIA-Linux-x86_64-610.57.04.run --extract-only",
+	"make -C NVIDIA-Linux-x86_64-610.57.04/kernel-open modules -j$RAD_MAKEOPTS"
 ]
 install_command = [
-	"make -C NVIDIA-Linux-x86_64-610.43.03/kernel-open modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
+	"make -C NVIDIA-Linux-x86_64-610.57.04/kernel-open modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR",
 	"mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps",
-	"find NVIDIA-Linux-x86_64-610.43.03/ -maxdepth 1 -name '*.so*' ! -name 'libGL.*' ! -name 'libEGL.*' ! -name 'libGLX.*' ! -name 'libGLESv*.*' ! -name 'libOpenGL.*' ! -name 'libGLdispatch.*' -exec cp -a {} $DESTDIR/usr/lib/ \\;",
-	"for bin in nvidia-smi nvidia-settings nvidia-xconfig nvidia-cuda-mps-control nvidia-cuda-mps-server nvidia-debugdump nvidia-modprobe nvidia-persistenced nvidia-powerd nvidia-ngx-updater nvidia-pcc; do [ -f NVIDIA-Linux-x86_64-610.43.03/$bin ] && cp -a NVIDIA-Linux-x86_64-610.43.03/$bin $DESTDIR/usr/bin/ || true; done",
-	"cp -a NVIDIA-Linux-x86_64-610.43.03/*.1.gz $DESTDIR/usr/share/man/man1/ || true",
-	"cp -a NVIDIA-Linux-x86_64-610.43.03/10_nvidia.json $DESTDIR/usr/share/glvnd/egl_vendor.d/ || true",
-	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.desktop $DESTDIR/usr/share/applications/ || true",
-	"cp -a NVIDIA-Linux-x86_64-610.43.03/nvidia-settings.png $DESTDIR/usr/share/pixmaps/ || true"
+	"find NVIDIA-Linux-x86_64-610.57.04/ -maxdepth 1 -name '*.so*' ! -name 'libGL.*' ! -name 'libEGL.*' ! -name 'libGLX.*' ! -name 'libGLESv*.*' ! -name 'libOpenGL.*' ! -name 'libGLdispatch.*' -exec cp -a {} $DESTDIR/usr/lib/ \\;",
+	"for bin in nvidia-smi nvidia-settings nvidia-xconfig nvidia-cuda-mps-control nvidia-cuda-mps-server nvidia-debugdump nvidia-modprobe nvidia-persistenced nvidia-powerd nvidia-ngx-updater nvidia-pcc; do [ -f NVIDIA-Linux-x86_64-610.57.04/$bin ] && cp -a NVIDIA-Linux-x86_64-610.57.04/$bin $DESTDIR/usr/bin/ || true; done",
+	"cp -a NVIDIA-Linux-x86_64-610.57.04/*.1.gz $DESTDIR/usr/share/man/man1/ || true",
+	"cp -a NVIDIA-Linux-x86_64-610.57.04/10_nvidia.json $DESTDIR/usr/share/glvnd/egl_vendor.d/ || true",
+	"cp -ar NVIDIA-Linux-x86_64-610.57.04/firmware $DESTDIR/usr/lib || true",
+	"cp -a NVIDIA-Linux-x86_64-610.57.04/nvidia-settings.desktop $DESTDIR/usr/share/applications/ || true",
+	"cp -a NVIDIA-Linux-x86_64-610.57.04/nvidia-settings.png $DESTDIR/usr/share/pixmaps/ || true"
 ]
 depends = "linux,vulkan-headers,vulkan-loader,spirv-headers,spirv-tools,glslang,libglvnd"
