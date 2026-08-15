@@ -5,4 +5,4 @@ description = "Official Steam launcher for games"
 source = "https://repo.steampowered.com/steam/archive/stable/steam_1.0.0.87.tar.gz"
 
 [build]
-system = "autotools"
+system = "make"
