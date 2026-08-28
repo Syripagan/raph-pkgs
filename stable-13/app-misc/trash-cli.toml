@@ -1,0 +1,8 @@
+[package]
+name = "trash-cli"
+version = "0.24.5.26"
+description = "trash-cli - Command Line Interface to FreeDesktop.org Trash"
+source = "https://github.com/andreafrancia/trash-cli/archive/refs/tags/0.24.5.26.tar.gz"
+
+[build]
+system = "python"

@@ -7,6 +7,7 @@ app-editors/neovim
 app-metadata/appstream
 app-misc/fastfetch
 app-misc/hello
+app-misc/trash-cli
 app-shells/bash-completion
 app-shells/fish
 app-text/docbook-xml
