@@ -10,7 +10,7 @@ build_commands = [
 	"make mrproper",
 	"cp /var/lib/rad/packages/config/linux .config",
 	"make menuconfig",
-	"make -j$RAD_MAKEOPTS"
+	"make -j$RAD_CORES"
 ]
 install_command = [
 	"mkdir -p $DESTDIR/boot $DESTDIR/var/lib/rad/packages/config $DESTDIR/usr/src/linux-7.1.6 $DESTDIR/lib/modules/7.1.6",

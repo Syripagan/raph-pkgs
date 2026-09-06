@@ -9,7 +9,7 @@ system = "manual"
 build_commands = [
 	"sed '/*strchr/s/cast_const_char //g' -i ftp.c",
 	"./configure --prefix=/usr --mandir=/usr/share/man",
-	"make -j$RAD_MAKEOPTS"
+	"make -j$RAD_CORES"
 ]
 install_command = [
 	"make DESTDIR=$DESTDIR install",

@@ -6,6 +6,6 @@ source = "https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0
 
 [build]
 system = "manual"
-build_commands = "sed -i 's:"/desktop:"/org:' schema/*.xml && mkdir build-gkr && meson setup build-gkr --prefix=/usr --buildtype=release -D systemd=disabled -D manpage=false && ninja -C build-gkr -j$RAD_MAKEOPTS"
+build_commands = "sed -i 's:"/desktop:"/org:' schema/*.xml && mkdir build-gkr && meson setup build-gkr --prefix=/usr --buildtype=release -D systemd=disabled -D manpage=false && ninja -C build-gkr -j$RAD_CORES"
 install_command = "ninja install -C build-gkr"
 depends = "gcr"

@@ -9,7 +9,7 @@ system = "manual"
 build_commands = [ 
 	'mkdir build',
 	'cmake -B build -DWITH_LUA_ENGINE=System -DBUILD_SHARED_LIBS=ON -DLJ_ARCH=x64 -DLUJIT_VERSION=2.1',
-	'make -C build -j$RAD_MAKEOPTS'
+	'make -C build -j$RAD_CORES'
 ]
 install_command = "make install -C build && mkdir $DESTDIR/usr/include -p && cp src/*.h $DESTDIR/usr/include/"
 depends = "libuv,luajit"

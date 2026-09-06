@@ -6,5 +6,5 @@ source = "https://github.com/libbpf/libbpf/archive/refs/tags/v1.7.0.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "make -C src -j$RAD_MAKEOPTS"
+build_commands = "make -C src -j$RAD_CORES"
 install_command = "make DESTDIR=$DESTDIR -C src install"

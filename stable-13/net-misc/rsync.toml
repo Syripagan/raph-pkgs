@@ -8,7 +8,7 @@ source = "https://www.samba.org/ftp/rsync/src/rsync-3.4.1.tar.gz"
 system = "manual"
 build_commands = [
 	"./configure --prefix=/usr --disable-xxhash",
-	"make -j$RAD_MAKEOPTS"
+	"make -j$RAD_CORES"
 ]
 install_command = [
 	"make install DESTDIR=$DESTDIR"

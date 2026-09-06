@@ -6,6 +6,6 @@ source = "https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.
 
 [build]
 system = "manual"
-build_commands = "(mkdir build; cd build; meson setup --buildtype=release --prefix=/usr -D apidocs=false -D man=false -D gir=false -D bash-completion=false -D stemming=false ..; ninja -j$RAD_MAKEOPTS)"
+build_commands = "(mkdir build; cd build; meson setup --buildtype=release --prefix=/usr -D apidocs=false -D man=false -D gir=false -D bash-completion=false -D stemming=false ..; ninja -j$RAD_CORES)"
 install_command = "ninja install -C build && mv -v $DESTDIR/usr/share/doc/appstream{,-1.1.2}"
 depends = "libxml2"

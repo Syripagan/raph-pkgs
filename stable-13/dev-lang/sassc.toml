@@ -6,6 +6,6 @@ source = "https://github.com/sass/sassc/archive/3.6.2/sassc-3.6.2.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "autoreconf -fi && ./configure --prefix=/usr && make -j$RAD_MAKEOPTS"
+build_commands = "autoreconf -fi && ./configure --prefix=/usr && make -j$RAD_CORES"
 install_command = "make install"
 depends = "libsass"

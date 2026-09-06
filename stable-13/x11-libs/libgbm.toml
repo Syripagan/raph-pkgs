@@ -10,7 +10,7 @@ build_commands = [
 	"rm -rf build || true",
 	"mkdir build",
 	"sh -c 'if [ \"$IS_M32\" = \"1\" ]; then (meson setup --prefix=/usr --buildtype=release --cross-file=lib32 --libdir=/usr/lib32 build); else (meson setup --prefix=/usr --buildtype=release build); fi'",
-	"ninja -C build -j$RAD_MAKEOPTS"
+	"ninja -C build -j$RAD_CORES"
 ]
 install_command = "ninja install -C build"
 multilib_support = true

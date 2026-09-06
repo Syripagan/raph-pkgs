@@ -10,7 +10,7 @@ build_commands = [
 	'sed -i "s/prop->ambiguous_width/0/g" src/nvim/mbyte.c',
 	'mkdir build',
 	'cmake -B build -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release',
-	'make -C build -j$RAD_MAKEOPTS'
+	'make -C build -j$RAD_CORES'
 ]
 install_command = "make install -C build"
 depends = "luv,libtermkey,unibilium,libvterm"

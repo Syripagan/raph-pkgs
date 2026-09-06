@@ -3,6 +3,7 @@ name = "nvidia-drivers"
 version = "610.57.04"
 description = "Nvidia proprietary drivers package"
 source = "https://github.com/dejuri/rad.git"
+unfree = true
 
 [build]
 system = "manual"
@@ -10,7 +11,7 @@ build_commands = [
 	"wget https://us.download.nvidia.com/XFree86/Linux-x86_64/610.57.04/NVIDIA-Linux-x86_64-610.57.04.run",
 	"chmod +x NVIDIA-Linux-x86_64-610.57.04.run",
 	"./NVIDIA-Linux-x86_64-610.57.04.run --extract-only",
-	"make -C NVIDIA-Linux-x86_64-610.57.04/kernel-open modules -j$RAD_MAKEOPTS"
+	"make -C NVIDIA-Linux-x86_64-610.57.04/kernel-open modules -j$RAD_CORES"
 ]
 install_command = [ "make -C NVIDIA-Linux-x86_64-610.57.04/kernel-open modules_install SYSSRC=/usr/src/linux-7.1.6 INSTALL_MOD_PATH=$DESTDIR/usr",
     "mkdir -p $DESTDIR/usr/lib $DESTDIR/usr/lib32 $DESTDIR/usr/bin $DESTDIR/usr/share/glvnd/egl_vendor.d $DESTDIR/etc/vulkan/icd.d $DESTDIR/etc/vulkan/implicit_layer.d $DESTDIR/usr/lib/gbm $DESTDIR/usr/lib32/gbm $DESTDIR/usr/share/nvidia $DESTDIR/usr/share/man/man1 $DESTDIR/usr/share/applications $DESTDIR/usr/share/pixmaps $DESTDIR/usr/lib/firmware/nvidia/610.57.04 $DESTDIR/usr/share/egl/egl_external_platform.d $DESTDIR/usr/lib/nvidia/wine $DESTDIR/usr/lib/nvidia/32",

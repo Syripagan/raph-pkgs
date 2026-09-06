@@ -9,7 +9,7 @@ system = "manual"
 build_commands = [
 	"mkdir build",
 	"cmake -B build -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release",
-	"ninja -C build -j$RAD_MAKEOPTS"
+	"ninja -C build -j$RAD_CORES"
 ]
 install_command = [
 	"DESTDIR=$DESTDIR ninja -C build install"

@@ -10,6 +10,6 @@ build_commands = [
 	"sed -i '/^RELEASE/s|^|#|' nspr/pr/src/misc/Makefile.in",
 	"sed -i 's|$(LIBRARY) ||'  nspr/config/rules.mk",
 	"./nspr/configure --prefix=/usr --with-mozilla --with-pthreads $([ $(uname -m) = x86_64 ] && echo --enable-64bit)",
-	"make -j$RAD_MAKEOPTS"
+	"make -j$RAD_CORES"
 ]
 install_command = "make install DESTDIR=$DESTDIR"

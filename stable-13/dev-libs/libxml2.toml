@@ -9,7 +9,7 @@ system = "manual"
 build_commands = [
 	"mkdir build",
 	"meson setup build --prefix=/usr --buildtype=release -D history=enabled -D python=enabled -D docs=disabled",
-	"ninja -C build -j$RAD_MAKEOPTS"
+	"ninja -C build -j$RAD_CORES"
 ]
 install_command = [
 	"DESTDIR=$DESTDIR ninja -C build install",

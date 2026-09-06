@@ -11,7 +11,7 @@ build_commands = [
 	"patch -Np1 -i ./mesa-demos-9.0.0-install_data-1.patch",
 	"mkdir build",
 	"meson setup --prefix=/usr --buildtype=release build",
-	"ninja -C build -j$RAD_MAKEOPTS"
+	"ninja -C build -j$RAD_CORES"
 ]
 install_command = [
 	"DESTDIR=$DESTDIR ninja -C build install",

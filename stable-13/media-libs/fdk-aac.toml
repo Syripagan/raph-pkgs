@@ -6,5 +6,5 @@ source = "https://downloads.sourceforge.net/opencore-amr/fdk-aac-2.0.3.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "CFLAGS='-O2 -fPIC' CXXFLAGS='-O2 -fPIC' ./configure --prefix=/usr --disable-static && make -j$RAD_MAKEOPTS"
+build_commands = "CFLAGS='-O2 -fPIC' CXXFLAGS='-O2 -fPIC' ./configure --prefix=/usr --disable-static && make -j$RAD_CORES"
 install_command = "make DESTDIR=$DESTDIR install"

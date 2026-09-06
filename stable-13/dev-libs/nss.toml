@@ -9,7 +9,7 @@ system = "manual"
 build_commands = [
 	"wget https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch",
 	"patch -Np1 -i ./nss-standalone-1.patch",
-	"make -C nss BUILD_OPT=$RAD_MAKEOPTS NSPR_INCLUDE_DIR=/usr/include/nspr USE_SYSTEM_ZLIB=1 ZLIB_LIBS=-lz NSS_ENABLE_WERROR=0 NSS_USE_SYSTEM_SQLITE=1 $([ $(uname -m) = x86_64 ] && echo USE_64=1)"
+	"make -C nss BUILD_OPT=$RAD_CORES NSPR_INCLUDE_DIR=/usr/include/nspr USE_SYSTEM_ZLIB=1 ZLIB_LIBS=-lz NSS_ENABLE_WERROR=0 NSS_USE_SYSTEM_SQLITE=1 $([ $(uname -m) = x86_64 ] && echo USE_64=1)"
 ]
 install_command = [
 	"mkdir -p $DESTDIR/usr/lib/pkgconfig $DESTDIR/usr/include/nss $DESTDIR/usr/bin",

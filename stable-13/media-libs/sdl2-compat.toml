@@ -6,6 +6,6 @@ source = "https://www.libsdl.org/release/sdl2-compat-2.32.66.tar.gz"
 
 [build]
 system = "manual"
-build_commands = "mkdir build && cmake -B build -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D CMAKE_SKIP_INSTALL_RPATH=ON -D SDL2COMPAT_STATIC=OFF -D SDL2COMPAT_TESTS=OFF -W no-dev -G Ninja && ninja -C build -j$RAD_MAKEOPTS"
+build_commands = "mkdir build && cmake -B build -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D CMAKE_SKIP_INSTALL_RPATH=ON -D SDL2COMPAT_STATIC=OFF -D SDL2COMPAT_TESTS=OFF -W no-dev -G Ninja && ninja -C build -j$RAD_CORES"
 install_command = "ninja install -C build && rm -vf /tmp/raph/image/sdl2-compat/usr/lib/libSDL2_test.a"
 depends = "sdl3"

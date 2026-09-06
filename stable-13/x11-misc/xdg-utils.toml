@@ -10,7 +10,7 @@ build_commands = [
 	"./configure --prefix=/usr",
 	"mkdir -p scripts/html scripts/man",
 	"touch scripts/xdg-desktop-menu.txt scripts/xdg-desktop-icon.txt scripts/xdg-mime.txt scripts/xdg-icon-resource.txt scripts/xdg-open.txt scripts/xdg-email.txt scripts/xdg-screensaver.txt scripts/xdg-settings.txt",
-	"make XMLTO=true -j$RAD_MAKEOPTS"
+	"make XMLTO=true -j$RAD_CORES"
 ]
 install_command = "make XMLTO=true DESTDIR=$DESTDIR install"
 depends = "xmlto,links"

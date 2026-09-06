@@ -6,6 +6,6 @@ source = "https://download.gnome.org/sources/gcr/3.41/gcr-3.41.2.tar.xz"
 
 [build]
 system = "manual"
-build_commands = "sed '/ssh.add/d; /ssh.agent/d' -i meson.build && sed -i 's:"/desktop:"/org:' schema/*.xml && mkdir build && meson setup build --prefix=/usr --buildtype=release -D gtk_doc=false -D ssh_agent=false && ninja -C build -j$RAD_MAKEOPTS"
+build_commands = "sed '/ssh.add/d; /ssh.agent/d' -i meson.build && sed -i 's:"/desktop:"/org:' schema/*.xml && mkdir build && meson setup build --prefix=/usr --buildtype=release -D gtk_doc=false -D ssh_agent=false && ninja -C build -j$RAD_CORES"
 install_command = "ninja install -C build"
 depends = "gnupg"

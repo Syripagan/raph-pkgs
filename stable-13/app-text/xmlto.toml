@@ -11,7 +11,7 @@ build_commands = [
 	"LINKS=\"/usr/bin/links\" ./configure --prefix=/usr",
 	"sed -i 's/FORMAT_DIR=.*xmlto.*/\\t@true/' Makefile",
 	"sed -i 's/FORMAT_DIR=.*xmlif.*/\\t@true/' Makefile",
-	"make -j$RAD_MAKEOPTS",
+	"make -j$RAD_CORES",
 	"mkdir -p man/man1 && touch man/man1/xmlto.1 man/man1/xmlif.1"
 ]
 install_command = "make DESTDIR=$DESTDIR install"

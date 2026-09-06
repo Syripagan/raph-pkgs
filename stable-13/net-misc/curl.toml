@@ -8,7 +8,7 @@ source = "https://curl.se/download/curl-8.21.0.tar.xz"
 system = "manual"
 build_commands = [
 	"./configure --prefix=/usr --disable-static --with-openssl --with-ca-path=/etc/ssl/certs",
-	"make -j$RAD_MAKEOPTS"
+	"make -j$RAD_CORES"
 ] 
 install_command = "make DESTDIR=$DESTDIR install"
 depends = "libpsl,nghttp2"
