@@ -2,7 +2,6 @@
 name = "nvidia-drivers"
 version = "610.57.04"
 description = "Nvidia proprietary drivers package"
-source = "https://github.com/dejuri/rad.git"
 unfree = true
 
 [build]
