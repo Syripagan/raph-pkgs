@@ -21,6 +21,7 @@ dev-lang/duktape
 dev-lang/luajit
 dev-lang/nasm
 dev-lang/sassc
+dev-lang/zig
 dev-libs/elfutils
 dev-libs/fribidi
 dev-libs/json-glib
@@ -57,6 +58,7 @@ gui-apps/mesa-demos
 gui-libs/gtk4
 gui-libs/libadwaita
 gui-libs/libdecor
+gui-misc/lydm
 gui-wm/niri
 media-gfx/imagemagick
 media-libs/dav1d

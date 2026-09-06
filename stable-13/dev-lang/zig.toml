@@ -1,0 +1,14 @@
+[package]
+name = "zig"
+version = "0.16.0"
+description = "Zig is a general-purpose programming language and toolchain for maintaining"
+source = "https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz"
+
+[build]
+system = "manual"
+build_commands = "true"
+install_command = [
+	"mkdir $DESTDIR/usr/lib/zig $DESTDIR/usr/bin -p",
+	"cp zig $DESTDIR/usr/bin/zig",
+	"cp -r lib/* $DESTDIR/usr/lib/zig"
+]

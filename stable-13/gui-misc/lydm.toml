@@ -1,0 +1,11 @@
+[package]
+name = "lydm"
+version = "1.4.1"
+description = "Ly is a lightweight TUI display manager for Linux and BSD"
+source = "https://codeberg.org/fairyglade/ly/archive/v1.4.1.tar.gz"
+
+[build]
+system = "manual"
+build_commands = "true"
+install_command = "DESTDIR=$DESTDIR zig build -Doptimize=ReleaseFast -Dinit_system=dinit --prefix /usr"
+depends = "zig"
