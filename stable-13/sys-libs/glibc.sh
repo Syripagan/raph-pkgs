@@ -42,7 +42,7 @@ if [ "$ACTION" = "build" ]; then
         --enable-kernel=5.4 \
         libc_cv_slibdir="$T_LIBDIR"
 
-    make -j$RAD_MAKEOPTS
+    make -j$RAD_CORES
 
 elif [ "$ACTION" = "install" ]; then
     make -C "$BUILD_DIR" DESTDIR="$DESTDIR" install

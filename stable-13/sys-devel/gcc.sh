@@ -34,7 +34,7 @@ if [ "$ACTION" = "build" ]; then
 	--disable-fixincludes \
         --disable-libstdcxx-pch \
         $CONFIG_FLAGS
-    make -j$RAD_MAKEOPTS
+    make -j$RAD_CORES
 elif [ "$ACTION" = "install" ]; then
     cd $BUILD_DIR
     make DESTDIR="$DESTDIR" install
